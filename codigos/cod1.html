@@ -3,7 +3,9 @@
 	<title>Aula 08/04</title>
 </head>
 <body>
-<div id="cod1"><pre>
+<div id="cod1">
+<h2>Código contando palavras</h2>
+<pre>
 <code>
 algoritmo "Primeiro Programa"
 
@@ -49,8 +51,53 @@ fimalgoritmo
 
 </code>
 </pre></div><hr>
-<div id="cod2"><pre>
-<code></code>
+<div id="cod2">
+<h2>Código contando palavras tirando múltiplos espaços</h2>	
+<pre>
+<code>
+algoritmo "Primeiro Programa"
+
+var
+  palavra: caractere
+  letra: caractere
+  contador: inteiro
+  posicaoOndeEncontreiChar : inteiro
+
+
+funcao contaPalavras(texto : caractere) : inteiro
+  inicio
+  contador <- 0
+
+  se Compr(texto) <> 0 entao
+    contador <- 1
+    enquanto Pos(texto, " ") <> 0 faca
+      posicaoOndeEncontreiChar <- Pos(texto, " ")
+      se posicaoOndeEncontreiChar <> 0 entao
+        contador <- contador + 1
+        texto <- Copia(texto, posicaoOndeEncontreiChar + 1, 99)
+
+        enquanto Pos(texto, " ") = 1 faca
+          texto <- Copia(texto, 2, 99)
+        fimenquanto
+
+      fimse
+    fimenquanto
+  
+  fimse
+
+
+  retorne contador
+fimfuncao
+
+inicio
+  palavra <- "Texto  com      espaços    "
+  letra <- " "
+  escreval(contaPalavras(palavra))
+  //Compr (length)
+  //Pos(char, String)
+  //Copia(String, start, end)
+fimalgoritmo
+</code>
 </pre></div><hr>
 <div id="cod3"><pre>
 <code></code>
