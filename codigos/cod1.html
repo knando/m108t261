@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Aula 08/04</title>
+</head>
+<body>
+<div id="cod1">
+algoritmo "Primeiro Programa"
+
+
+var
+  palavra: caractere
+  letra: caractere
+  contador: inteiro
+  posicao : inteiro
+
+inicio
+  palavra <- ""
+  letra <- " "
+  
+  se Compr(palavra) > 0 entao
+    contador <- contador + 1
+  fimse
+
+  repita
+    posicao <- Pos(Maiusc(palavra), letra)
+    se posicao <> 0 entao 
+      contador <- contador + 1
+      palavra <- Copia(palavra, posicao + 1, 99)
+    fimse
+  ate posicao = 0
+
+  escreval(contador)
+
+  //nome <- Maiusc(nome + " Bandeira")
+  //escreval(Compr("abc"))
+  // Este método está com a documentação incorreta pois as variáveis estão invertidas
+  //escreval(Pos("la", "ola"))
+  //escreval(Pos("ola", "la"))
+  //nome <- Copia(nome, 3, 10)
+  //escreval(nome)
+
+  //Maiusc(String)
+  //Minusc(String)
+  //Compr (length)
+  //Pos(char, String)
+  //Copia(String, start, end)
+fimalgoritmo
+
+</div><hr>
+<div id="cod2">
+</div><hr>
+<div id="cod3">
+</div><hr>
+<div id="cod4">
+</div><hr>
+</body>
+</html>
