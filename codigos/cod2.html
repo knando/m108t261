@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>Aula 09/04</title>
+</head>
+<body>
+<div id="cod1">
+<h2>Código validando se um nome e sobrenome foram digitados</h2>
+<pre>
+<code>
+algoritmo "Enquanto, contador e flag"
+
+var
+  nome: caractere
+  contador: inteiro
+  // Flag significa bandeira. Neste contexto é como se levantassemos uma bandeira indicando algo - similar ao que é feito em esportes.
+  flagNomeEhValido: logico
+
+inicio
+  // ENQUANTO o texto tiver menos que 1 caractere OU não encontrar um ESPAÇO (ou seja, não foi digitado nome E sobrenome)
+  enquanto nao flagNomeEhValido e contador < 3 faca
+    escreval("Digite seu nome completo: ")
+    leia(nome)
+
+    // Ao adicionar o resultado de um teste a uma variável lógica, tornamos possível reutilizar este resultado
+    flagNomeEhValido <- Compr(nome) > 1 e Pos(nome, " ") <> 0
+
+    se nao flagNomeEhValido entao
+      contador <- contador + 1
+      escreval("Erro: Você não digitou um nome e sobrenome.")
+    fimse
+  fimenquanto
+  limpatela
+  // Utilizamos a flag para indicar que, ao fim da execução, não atingimos o resultado esperado.
+  se flagNomeEhValido entao
+    escreval("Ocorreram ", contador, " erros e o nome é ", nome)
+  senao
+    escreval("O usuário não digitou um nome válido e excedeu as tentativas.")
+  fimse
+fimalgoritmo
+
+  // Compr(texto) RETORNA o comprimento do texto
+  // Pos(texto, textoAProcurar) procura o segundo texto dentro do primeiro e RETORNA a posição onde este foi encontrado
+  // Copia(texto, inicio, quantidade) RETORNA uma cópia do texto começando na posição indicada e até atingir a quantidade de caracteres
+
+</code>
+</pre></div><hr>
+<div id="cod2">
+<h2>Código para encontrar o mínimo divisor comum</h2>	
+<pre>
+<code>
+algoritmo "Encontrando o mínimo divisor comum"
+fimalgoritmo
+</code>
+</pre></div><hr>
+<div id="cod3">
+<h2>Código para descobrir raiz quadrada</h2>	
+<pre>
+<code>
+algoritmo "Descobrindo se um número tem raiz quadrada"
+fimalgoritmo
+</code>
+</pre></div><hr>
+<div id="cod4">
+<h2>Código para fazer sequência Fibonacci</h2>	
+<pre>
+<code>
+algoritmo "Sequência Fibonacci"
+fimalgoritmo
+</code>
+</pre></div><hr>
+</body>
+</html>
