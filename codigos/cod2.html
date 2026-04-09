@@ -7,27 +7,40 @@
 <h2>Código para jogar par ou ímpar</h2>	
 <pre>
 <code>
-algoritmo "Par ou impar"
+algoritmo "Primeiro Programa"
 
 var
   nome: caractere
   numeroDoUsuario: inteiro
   numeroDoComputador: inteiro
+  contadorVitoria: inteiro
+  contadorDerrotas: inteiro
 inicio
   // assumo que o jogador é par
   numeroDoComputador <- 1
-  enquanto numeroDoComputador + numeroDoUsuario mod 2 = 1 faca
+  contadorVitoria <- 0
+  // vamos jogar até dar par 3 vezes
+  enquanto contadorVitoria < 3 e contadorDerrotas < 3 faca
     leia(numeroDoUsuario)
     // gera número aleatório de 0 a 1 (menor que 2)
     numeroDoComputador <- RandI(2)
     escreval("Numero do jogador é ", numeroDoUsuario)
     escreval("Numero do computador é ", numeroDoComputador)
     se((numeroDoComputador + numeroDoUsuario) mod 2 = 0) entao
-      escreval("Você venceu. Fim de jogo")
+      // contadorVitoria = 2
+      contadorVitoria <- contadorVitoria + 1
+      escreval("Você venceu ", contadorVitoria, " vezes")
     senao
       escreval("É impar, você perdeu. Tente novamente.")
+      contadorDerrotas <- contadorDerrotas + 1
     fimse
   fimenquanto
+
+  se contadorVitoria = 3 entao
+    escreval("Você venceu ", contadorVitoria, " vezes. Parabéns! Fim de jogo")
+  senao
+    escreval("Você perdeu ", contadorDerrotas, " vezes. Parabéns! Fim de jogo")
+  fimse
 
 fimalgoritmo
 </code>
