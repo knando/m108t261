@@ -4,6 +4,35 @@
 </head>
 <body>
 <div id="cod1">
+<h2>Código para jogar par ou ímpar</h2>	
+<pre>
+<code>
+algoritmo "Par ou impar"
+
+var
+  nome: caractere
+  numeroDoUsuario: inteiro
+  numeroDoComputador: inteiro
+inicio
+  // assumo que o jogador é par
+  numeroDoComputador <- 1
+  enquanto numeroDoComputador + numeroDoUsuario mod 2 = 1 faca
+    leia(numeroDoUsuario)
+    // gera número aleatório de 0 a 1 (menor que 2)
+    numeroDoComputador <- RandI(2)
+    escreval("Numero do jogador é ", numeroDoUsuario)
+    escreval("Numero do computador é ", numeroDoComputador)
+    se((numeroDoComputador + numeroDoUsuario) mod 2 = 0) entao
+      escreval("Você venceu. Fim de jogo")
+    senao
+      escreval("É impar, você perdeu. Tente novamente.")
+    fimse
+  fimenquanto
+
+fimalgoritmo
+</code>
+</pre></div><hr>
+<div id="cod2">
 <h2>Código validando se um nome e sobrenome foram digitados</h2>
 <pre>
 <code>
@@ -41,37 +70,6 @@ fimalgoritmo
   // Compr(texto) RETORNA o comprimento do texto
   // Pos(texto, textoAProcurar) procura o segundo texto dentro do primeiro e RETORNA a posição onde este foi encontrado
   // Copia(texto, inicio, quantidade) RETORNA uma cópia do texto começando na posição indicada e até atingir a quantidade de caracteres
-
-</code>
-</pre></div><hr>
-<div id="cod2">
-<h2>Código para encontrar o mínimo divisor comum</h2>	
-<pre>
-<code>
-algoritmo "Primeiro Programa"
-
-var
-  nome: caractere
-  numeroDoUsuario: inteiro
-  numeroDoComputador: inteiro
-inicio
-  // assumo que o jogador é par
-  numeroDoComputador <- 1
-  enquanto numeroDoComputador + numeroDoUsuario mod 2 = 1 faca
-    leia(numeroDoUsuario)
-    // gera número aleatório de 0 a 1 (menor que 2)
-    numeroDoComputador <- RandI(2)
-    escreval("Numero do jogador é ", numeroDoUsuario)
-    escreval("Numero do computador é ", numeroDoComputador)
-    se((numeroDoComputador + numeroDoUsuario) mod 2 = 0) entao
-      escreval("Você venceu. Fim de jogo")
-    senao
-      escreval("É impar, você perdeu. Tente novamente.")
-    fimse
-  fimenquanto
-
-
-fimalgoritmo
 
 </code>
 </pre></div><hr>
