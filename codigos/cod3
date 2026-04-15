@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Aula 15/04</title>
+</head>
+<body>
+<div id="cod1">
+<h2>Código para descobrir raiz quadrada</h2>	
+<pre>
+<code>
+algoritmo "Descobrindo se um número tem raiz quadrada"
+  
+var
+  encontrouRaiz : logico
+  contador: inteiro
+  alvo: inteiro
+
+inicio
+  encontrouRaiz <- falso
+  leia(alvo)
+  para i de 1 ate alvo faca
+    encontrouRaiz <- i * i = alvo
+    contador <- contador + 1
+    se encontrouRaiz entao
+      escreval("A raiz do ", alvo, " é ", i)
+      interrompa
+    fimse
+  fimpara
+  escreval(contador)
+  se nao encontrouRaiz entao
+    escreval("A raiz do ", alvo, " não é um número inteiro.")
+  fimse
+fimalgoritmo
+</code>
+</pre></div><hr>
+<div id="cod2">
+<h2>Código para fazer sequência Fibonacci</h2>	
+<pre>
+<code>
+algoritmo "Sequência Fibonacci"
+fimalgoritmo
+</code>
+</pre></div><hr>
+</body>
+</html>
