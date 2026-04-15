@@ -37,6 +37,33 @@ fimalgoritmo
 <pre>
 <code>
 algoritmo "Sequência Fibonacci"
+var
+  limite : inteiro
+  contador: inteiro
+  num1: inteiro
+  num2: inteiro
+  soma: inteiro
+
+inicio
+  leia(limite)
+  leia(num1)
+  escreva(num1, " ")
+  num2 <- num1
+
+  enquanto soma < limite faca
+    soma <- num1 + num2
+    num1 <- num2
+    num2 <- soma
+    escreva(soma, " ")
+
+    se contador > 10 entao
+      timer 2000
+      limpatela
+      contador <- 0
+    senao
+      contador <- contador +1
+    fimse
+  fimenquanto
 fimalgoritmo
 </code>
 </pre></div><hr>
